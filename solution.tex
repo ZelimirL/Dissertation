@@ -1,0 +1,62 @@
+\documentclass[11pt, oneside]{article}    
+\usepackage[margin=.5in]{geometry}       
+\geometry{letterpaper}                  
+%\geometry{landscape}                  
+\usepackage[parfill]{parskip}       
+\usepackage{graphicx}       
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage{hyperref}
+
+\begin{document}
+
+Starting with:
+
+\begin{equation}\label{mainRadial}
+\begin{split}
+&\frac{d^2}{dR^2}f_l(kR)  +  \left[ - \frac{l(l+1)}{R^2} - 2\mu\left[V_b(R) - V_b(\infty)\right] + k^2\right]f_l(kR) = 0
+\end{split}
+\end{equation}
+
+This is just an exercise
+Setting:  $ h(R) = f(R)/R $ it follows:
+
+\begin{equation}
+\begin{split}
+& \frac{d\,h}{dR} = -\frac{f}{R^2} + \frac{f^{'}}{R} \Rightarrow \frac{f^{'}}{R} = h' + \frac{f}{R^2} \Rightarrow f' = Rh' +  \frac{f}{R} = Rh' + h \\[.8em]
+& \frac{d^2f}{dR^2} = h' + Rh^{''} + h' = Rh^{''} + 2h'
+\end{split} 
+\end{equation}
+plug in:
+\begin{equation}
+\begin{split}
+&  Rh^{''} + 2h' - \frac{l(l+1)}{R}h - 2\mu\left[V_b(R) - V_b(\infty)\right]Rh + k^2 Rh= 0
+\end{split}
+\end{equation}
+
+up to here;
+
+One approach this: \url{https://arxiv.org/pdf/1312.2425.pdf}
+
+Since this is a scattering problem we have a continuous spectra. 
+
+The boundary conditions for $ f $ are $ f(0) = f(\infty) = 0 $.  Replace 
+\begin{equation}
+r = kR, \,\,f'(kR) = k f'(r)\,\,\,\,\,,f^{''}(kR) = k^2 f^{''}(r)
+\end{equation}
+So the \eqref{mainRadial} becomes:
+\begin{equation}\label{mainRadial}
+\begin{split}
+& \frac{d^2}{dr^2}f_l(r)  +  \left[ - \frac{l(l+1)}{k^2R^2} - 2\frac{\mu}{k^2}\left[V_b(R) - V_b(\infty)\right] + 1\right]f_l(r) = 0
+\end{split}
+\end{equation}
+
+
+
+
+
+
+
+\end{document}
+
