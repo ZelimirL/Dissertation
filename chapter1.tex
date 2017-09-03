@@ -197,7 +197,7 @@ We express both function $ M(\mu) $ and $ L(\lambda) $ using the set of orthogon
 
 The next step is rather simple. For functions $ M(\mu) $ and $ L(\lambda) $, we need to find the functional dependency of the parameters $ p $ and $ A $, so that solution exists. The intersections of the two curves $ p_1 = f(A_1) $ and $ p_2 = g(A_2) $ provides the value of $ p $ and $ A $ when the condition for the  solutions exists. The desired precision is obtained by choosing the size number of terms in the series.
 
-The renaming issue is that even with the modern fast computers and optimized numerical libraries \cite{Lapack1}, calculating eigenvalues is a slow process. The complexity of the QR decomposition algorithm is $ O(n^3) $, and TODO: Add reference the best algorithm has the complexity of $ O(n^{\omega}, 2 < \omega \le 3 $.
+The renaming issue is that even with the modern fast computers and optimized numerical libraries \cite{Lapack1}, calculating eigenvalues is a slow process. The complexity of the QR decomposition algorithms is $ O(n^3) $ \cite{QRDecomposition1}, which make the QR factorisation feasible by todays computer systems.
 
 \subsection{Series Expansions and Eigenvalue Determinant}
 
