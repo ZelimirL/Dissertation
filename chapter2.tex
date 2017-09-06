@@ -4,12 +4,10 @@
 
 We apply the method used in the 3D case of the $ H_2^{+} $ ion to find the solution in 2 dimensions. The problem itself is analogous to the 3D problem, but leads to the Mathieu's function like solution for the radial problem.
 
-TODO: Move after
+TODO: Add more references
 In adition to the Bates paper \cite{Bates1}, there are other, more recent papers \cite{H2Plus2d1} \cite{TwoCentersParticle}, \cite{Kolos} which deal with the solution of the Scrhoedinger equation and spectrum of the $ H_2^{+} $ molecule. TODO: Add more citations.  The solution in \cite{H2Plus2d1} agrees well with our solution There are other solutions, but they rely on the approximative methods, and should be considered inferior to the analytical solution, we provide here. 
 
-Following the 3D case, we rely on Born-Oppenheimer (BO) approximation, in order to provide an analytical solution. The justification for using the BO approximation applies to the 2D problem as well, since the masses of the nuclei and electron(s) remain unchanged.
-
-Following the same BO approximation as in Chapter 1, and using atomic units, the Schrodinger equation for the $ H_2^{+} $ molecules is given by equation \eqref{eqPartial2D} below. The geometry of the 2D problem leads to choosing the elliptical coordinates as well, with two coordinates, $ \mu $ and $ \lambda $.
+Following the 3D case, we rely on Born-Oppenheimer (BO) approximation, in order to provide an analytical solution. The usual justification for using the BO approximation in molecular systems applies to the 2D problems as well, since the masses of the nuclei and electron(s) remain unchanged.  Following the same BO approximation as in Chapter 1, and using atomic units, the Schrodinger equation for the $ H_2^{+} $ molecules is given by equation \eqref{eqPartial2D} below. 
 
 \begin{equation}\label{eqPartial2D}
 \left(-\frac{1}{2}\nabla^2-\frac{1}{r_a}-\frac{1}{r_b}\right)\psi = E\,\psi
@@ -18,6 +16,8 @@ Following the same BO approximation as in Chapter 1, and using atomic units, the
 The equation \eqref{eqPartial2D} is superficially similar to the equation \eqref{eqPartial3D} and the diagram \ref{h2ion3d}, but in this case, the $ r_a $ and $ r_b $ are vectors in 2 dimensions.
 
 The electron wavefunction depends on only 3 quantum numbers, principal quantum number $ n $, angular quantum number $ l $ and spin $ s $. Again we ignore the spin degrees of freedom,considering the electron to be the regular 3 dimensional particles, where only its orbit is restricted to 2 dimensions.  Therefore the spin magnetic moment of the electron is not affected by the 2D restriction and the spin vector can point in any direction in 3D space. Also the orbit can have different shapes, thus there remains the need for an orbital quantum number. However, there can be one one orientation of the orbit, thus we do not consider the magnetic quantum number. This reasoning agrees with ~The solution of the electron wavefunction to the hydrogen atom in 2 dimensions \cite{H2atom} where electron wavefunction solution only depends on the principal and orbital quantum numbers.
+
+The geometry of the 2D problem leads to choosing the elliptical coordinates (as in 3D problem), with two coordinates, $ \mu $ and $ \lambda $ denoting the position of the electron in 2D plane. \cite{Arfken}
 
 TODO: Add references and more text
 
@@ -184,7 +184,7 @@ From now on, the solution to the equation for $ M(\mu) $ \eqref{M2} is straightf
 
 The equation for the $ L(\lambda) $ looks similar to the radial (modified) Mathieu equation, but unfortunately, it is not. However it is possible that the solution could be found using the same technique as for the radial equation, by expressing the solution as a series of functions. For the radial equation, the solution may exists int the form of the sum of Bessel functions \cite{Mathieu4}.  TODO: verify,
 
-We observe that both equations for the function $ M(\mu) $ and $ L(\lambda) $ are related to the Mathieu's equations. In general the Mathieu's equation represents the standing wave on an elliptical drum, (2D space),  and the solution for the Schroedinger equation is in general a standing wave, in 2D in this case.
+We observe that both equations for the function $ M(\mu) $ and $ L(\lambda) $ are related to the Mathieu's equations. In general the Mathieu's equation represents the standing wave on an elliptical drum, (2D space),  and the solution for the Schroedinger equation is in general a standing wave, in 2D in this case. So it is plausible that these types of slutions are similar.
 
 For the equation \eqref{L2-2} one could proceed by following the radial Mathieu's equations approach. One way to solve the Radial Mathieu's equation is by using the series of hyperbolic functions, obtained from the solution of angular Mathieu's equation using the substitution $ \eta = i\,\xi$.  But that this approach in numerically unstable and hard to compute \cite{Mathieu4}. There is another approach, using the product of Bessel Functions \cite{Mathieu4}
 
