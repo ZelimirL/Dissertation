@@ -13,7 +13,7 @@ In this calculation, the atoms are confined in 2 dimensions, while the radiation
 
 We will model this as a scattering problem, with a twist of a Born-Oppenheimer approximation. The Hamiltonian in this case will contain another term, namely the interaction of the radiation field with the electron.  Following \cite{Zygelman88},  in the center of the mass of the nuclei, the Hamiltonian for the system is given by: 
 
-\begin{equation}\label{eqH} 
+\begin{equation}\label{eqH1} 
 \begin{split} 
 & H = -\frac{1}{2\mu}\nabla^2_{\mathbf{R}} + H_{el}(\mathbf{R},\mathbf{r}) + H_{rad} + H_{int} 
 \end{split} 
@@ -40,13 +40,13 @@ So if we regard this process as a transition induced by the radiation field from
 
 Now we write the system wave function:
 
-\begin{equation}\label{ansatz}
+\begin{equation}\label{ansatzWave1}
 \begin{split}
 & \Ket{\Psi} = F_a(\mathbf{R})\chi_a(\mathbf{R},\mathbf{r})\Ket{0} + \sum_{k\alpha}{F_{k\alpha}(\mathbf{R})\chi_b(\mathbf{R},\mathbf{r})\Ket{k\alpha}}
 \end{split}
 \end{equation}
 
-where $ \chi_a(\mathbf{R},\mathbf{r}) $ and $ \chi_b(\mathbf{R},\mathbf{r}) $ are the eigenstates of the fixed position nuclei Hamiltonian $ H_{el} $ corresponding to the $ A^{1}\Sigma^{+}_u $  and $ X^{1}\Sigma^{+}_g $ state in body fixed frame respectively. The $ F_a(\mathbf{R}) $ and $ F_{k\alpha}(\mathbf{R}) $ are the amplitudes for the relative nuclear motion and $ \Ket{0} $ and $ \Ket{k\alpha} $ are the kets for the photon vacuum and single photon states. The ansatz \eqref{ansatz} is valid at low speed collisions, where the other channels are unaccessible. In the adiabatic approximation (i.e. ignoring the non-adiabatic effects) the amplitudes $ F_a(\mathbf{R}) $ and $ F_{k\alpha}(\mathbf{R}) $ obey the set of coupled equations:
+where $ \chi_a(\mathbf{R},\mathbf{r}) $ and $ \chi_b(\mathbf{R},\mathbf{r}) $ are the eigenstates of the fixed position nuclei Hamiltonian $ H_{el} $ corresponding to the $ A^{1}\Sigma^{+}_u $  and $ X^{1}\Sigma^{+}_g $ state in body fixed frame respectively. The $ F_a(\mathbf{R}) $ and $ F_{k\alpha}(\mathbf{R}) $ are the amplitudes for the relative nuclear motion and $ \Ket{0} $ and $ \Ket{k\alpha} $ are the kets for the photon vacuum and single photon states. The ansatz \eqref{ansatzWave1} is valid at low speed collisions, where the other channels are unaccessible. In the adiabatic approximation (i.e. ignoring the non-adiabatic effects) the amplitudes $ F_a(\mathbf{R}) $ and $ F_{k\alpha}(\mathbf{R}) $ obey the set of coupled equations:
 
 \begin{equation}\label{Fk}
 \begin{split}
@@ -112,7 +112,7 @@ g^{+}_{l} \sim \sqrt{\frac{2}{\pi}}\exp i\left[kR - \frac{l\pi}{2} + \delta_l(b)
 \end{equation}
 and $  \delta_l(b) $ is a phase shift. 
 
-The total wave function \eqref{ansatz} must be symmetric under the interchange of the $ H $ nuclei, so that $ F_a(\mathbf{R}) = -F_a(-\mathbf{R}) $ and $ F_{k\alpha}(\mathbf{R}) =  F_{k\alpha}(-\mathbf{R}) $. Now we solve equations \eqref{Fk} and \eqref{Fka} in the distorted wave approximation. Then $ F_a(\mathbf{R}) $ is the solution of the \eqref{Fk} with the coupling term set to be zero and it can be expressed in the form:
+The total wave function \eqref{ansatzWave1} must be symmetric under the interchange of the $ H $ nuclei, so that $ F_a(\mathbf{R}) = -F_a(-\mathbf{R}) $ and $ F_{k\alpha}(\mathbf{R}) =  F_{k\alpha}(-\mathbf{R}) $. Now we solve equations \eqref{Fk} and \eqref{Fka} in the distorted wave approximation. Then $ F_a(\mathbf{R}) $ is the solution of the \eqref{Fk} with the coupling term set to be zero and it can be expressed in the form:
 
 
 \begin{equation}\label{Flong}
@@ -378,7 +378,7 @@ Now with the separation of variable, the solution is a product of two function. 
 & D(R) = \int_{-1}^{1}{\int_{1}^{\infty}{ d\mu\, d\lambda\, M_u(\mu)L_u(\lambda)\lambda R M_g(\mu)L_g(\lambda) }}
 \end{split}
 \end{equation}
-where $ M_uL_u $ and $ M_gL_g $ are the odd/even solutions to the original Schrodinger equation \eqref{eqH}.
+where $ M_uL_u $ and $ M_gL_g $ are the odd/even solutions to the original Schrodinger equation \eqref{eqH1}.
 
 Since the functions $ M(\mu)L(\lambda) $ and  do not exist in the closed form, the dipole integral \eqref{dint}  is numerically calculated using Wolfram Mathematica.  First the two Mathematica modules (functions) are created, which solve the equations $ L(\lambda) $ and $ M(\mu) $, as function of the internuclear distance $ R $ and corresponding variables. Then the second module calculates the integral above,  as the function of $ R $.
 
