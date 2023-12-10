@@ -1,0 +1,6 @@
+#pdflatex command
+
+pdflatex dissertation.tex
+bibtex dissertation
+pdflatex dissertation.tex
+
